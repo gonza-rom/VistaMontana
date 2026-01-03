@@ -15,11 +15,11 @@ export default function Galeria() {
       { src: '/habitacion-3.jpg', alt: 'Habitación con vista', title: 'Habitación 3' }
     ],
     patios: [
-      { src: '/patio-1.jpg', alt: 'Patio principal', title: 'Patio Principal' },
+      { src: '/patio-1.webp', alt: 'Patio principal', title: 'Patio Principal' },
       { src: '/patio-2.jpg', alt: 'Patio exterior', title: 'Patio Exterior' },
       { src: '/patio-3.jpg', alt: 'Área de descanso', title: 'Área de Descanso' },
       { src: '/patio-4.jpg', alt: 'Espacio al aire libre', title: 'Espacio Exterior' },
-      { src: '/patio-5.jpg', alt: 'Jardín', title: 'Jardín' },
+      { src: '/patio-5.webp', alt: 'Jardín', title: 'Jardín' },
       { src: '/patio-6.jpg', alt: 'Jardín', title: 'Jardín' },
       { src: '/patio-noche.jpg', alt: 'Patio de noche', title: 'Patio Nocturno' }
     ],
