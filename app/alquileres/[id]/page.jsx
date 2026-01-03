@@ -1,24 +1,11 @@
-"use client";
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
-import { gtmEvent } from "@/lib/gtm";
-import { useEffect } from "react";
 
 export default async function AlquilerDetalle({ params }) {
-
-  useEffect(() => {
-    gtmEvent("view_alojamiento", {
-      alojamiento_id: alojamiento.id,
-      alojamiento_nombre: alojamiento.nombre,
-      precio: alojamiento.precio_por_noche,
-      tipo: alojamiento.tipo,
-    });
-  }, [alojamiento]);
-
-  const { id } = await params; // Importante: await params en Next.js 15+
+  const { id } = await params;
   const db = supabase();
 
   const { data: alquiler, error } = await db
@@ -50,7 +37,6 @@ export default async function AlquilerDetalle({ params }) {
         : alquiler.fotos;
       
       if (Array.isArray(fotosArray)) {
-        // Extraer solo el nombre del archivo de cada foto
         fotos = fotosArray.map(foto => {
           const fileName = foto.split('/').pop();
           return fileName;
@@ -58,7 +44,7 @@ export default async function AlquilerDetalle({ params }) {
       }
     } catch (e) {
       console.error('Error parseando fotos:', e);
-      fotos = ['habitacion-1.jpg']; // Fallback
+      fotos = ['habitacion-1.jpg'];
     }
   }
 
@@ -78,7 +64,7 @@ export default async function AlquilerDetalle({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-8">
             <div className="animate-slide-up">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">{alquiler.nombre}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{alquiler.nombre}</h1>
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <span className={`px-5 py-2 rounded-full font-semibold shadow-md ${
                   alquiler.tipo === 'casa'
@@ -105,7 +91,7 @@ export default async function AlquilerDetalle({ params }) {
 
             {/* Amenities Section */}
             <div className="bg-white rounded-2xl shadow-lg p-8 animate-slide-up stagger-2">
-              <h2 className="text-2xl font-bold mb-6 flex items-center">
+              <h2 className="text-2xl font-bold mb-6 flex items-center text-gray-900">
                 <span className="text-3xl mr-3">✨</span>
                 Características y Comodidades
               </h2>
@@ -114,7 +100,7 @@ export default async function AlquilerDetalle({ params }) {
                 <div className="space-y-6">
                   {/* Video */}
                   <div className="mb-6">
-                    <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[9/16]">
+                    <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-square">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full"
                         src="https://www.youtube.com/embed/y8SgfCrdxME"
@@ -127,7 +113,7 @@ export default async function AlquilerDetalle({ params }) {
                   </div>
 
                   <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">🛏️</span>3 Habitaciones Acogedoras
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -137,7 +123,7 @@ export default async function AlquilerDetalle({ params }) {
                   </div>
 
                   <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">🍳</span>Cocina Totalmente Equipada
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -147,7 +133,7 @@ export default async function AlquilerDetalle({ params }) {
                   </div>
 
                   <div className="border-l-4 border-blue-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">📺</span>Sala de Estar
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -156,7 +142,7 @@ export default async function AlquilerDetalle({ params }) {
                   </div>
 
                   <div className="border-l-4 border-red-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">🔥</span>Quincho Contiguo
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -166,7 +152,7 @@ export default async function AlquilerDetalle({ params }) {
                   </div>
 
                   <div className="border-l-4 border-cyan-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">🚿</span>2 Baños Completos
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -175,7 +161,7 @@ export default async function AlquilerDetalle({ params }) {
                   </div>
 
                   <div className="border-l-4 border-green-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">🌟</span>Extras
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -187,7 +173,7 @@ export default async function AlquilerDetalle({ params }) {
               ) : (
                 <div className="space-y-4">
                   <div className="border-l-4 border-green-500 pl-4">
-                    <h3 className="font-bold text-lg mb-3 flex items-center">
+                    <h3 className="font-bold text-lg mb-3 flex items-center text-gray-900">
                       <span className="text-2xl mr-2">✨</span>Acceso a Áreas Comunes
                     </h3>
                     <ul className="space-y-2 text-gray-700">
@@ -203,7 +189,7 @@ export default async function AlquilerDetalle({ params }) {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 animate-slide-up stagger-2">
-              <h2 className="text-2xl font-bold mb-4 flex items-center">
+              <h2 className="text-2xl font-bold mb-4 flex items-center text-gray-900">
                 <span className="text-3xl mr-3">📝</span>
                 Descripción
               </h2>
@@ -238,7 +224,8 @@ export default async function AlquilerDetalle({ params }) {
 
                 <Link
                   href="/contacto"
-                  className="flex items-center justify-center gap-3 w-full py-4 gradient-sierra text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover-glow"
+                  className="flex items-center justify-center gap-3 w-full py-4 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover-glow"
+                  style={{ backgroundColor: '#656B5B' }}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
