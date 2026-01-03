@@ -1,6 +1,19 @@
 import { supabase } from "@/lib/supabase";
-import MapaTuristico from "@/components/MapaTuristico";
+import dynamic from 'next/dynamic';
 import Image from "next/image";
+
+// Importar el mapa dinámicamente para evitar problemas de SSR
+const MapaTuristico = dynamic(() => import('@/components/MapaTuristico'), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[500px] rounded-lg bg-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+        <p className="text-gray-600">Cargando mapa...</p>
+      </div>
+    </div>
+  )
+});
 
 export default async function Turismo() {
   const db = supabase();
