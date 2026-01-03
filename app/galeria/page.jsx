@@ -10,51 +10,51 @@ export default function Galeria() {
   // Organizar las imágenes por categorías
   const imagenes = {
     habitaciones: [
-      { src: '/habitacion-1.jpg', alt: 'Habitación acogedora', title: 'Habitación 1' },
-      { src: '/habitacion-2.jpg', alt: 'Habitación confortable', title: 'Habitación 2' },
-      { src: '/habitacion-3.jpg', alt: 'Habitación con vista', title: 'Habitación 3' }
+      { src: '/habitacion-1.avif', alt: 'Habitación acogedora', title: 'Habitación 1' },
+      { src: '/habitacion-2.avif', alt: 'Habitación confortable', title: 'Habitación 2' },
+      { src: '/habitacion-3.avif', alt: 'Habitación con vista', title: 'Habitación 3' }
     ],
     patios: [
-      { src: '/patio-1.webp', alt: 'Patio principal', title: 'Patio Principal' },
-      { src: '/patio-2.jpg', alt: 'Patio exterior', title: 'Patio Exterior' },
-      { src: '/patio-3.jpg', alt: 'Área de descanso', title: 'Área de Descanso' },
-      { src: '/patio-4.jpg', alt: 'Espacio al aire libre', title: 'Espacio Exterior' },
-      { src: '/patio-5.webp', alt: 'Jardín', title: 'Jardín' },
-      { src: '/patio-6.jpg', alt: 'Jardín', title: 'Jardín' },
-      { src: '/patio-noche.jpg', alt: 'Patio de noche', title: 'Patio Nocturno' }
+      { src: '/patio-1.avif', alt: 'Patio principal', title: 'Patio Principal' },
+      { src: '/patio-2.avif', alt: 'Patio exterior', title: 'Patio Exterior' },
+      { src: '/patio-3.avif', alt: 'Área de descanso', title: 'Área de Descanso' },
+      { src: '/patio-4.avif', alt: 'Espacio al aire libre', title: 'Espacio Exterior' },
+      { src: '/patio-5.avif', alt: 'Jardín', title: 'Jardín' },
+      { src: '/patio-6.avif', alt: 'Jardín', title: 'Jardín' },
+      { src: '/patio-noche.avif', alt: 'Patio de noche', title: 'Patio Nocturno' }
     ],
     quincho: [
-      { src: '/quincho.jpg', alt: 'Quincho principal', title: 'Quincho' },
-      { src: '/quincho-2.jpg', alt: 'Área de parrilla', title: 'Área de Parrilla' },
-      { src: '/quincho-3.jpg', alt: 'Espacio para reuniones', title: 'Espacio Social' }
+      { src: '/quincho.avif', alt: 'Quincho principal', title: 'Quincho' },
+      { src: '/quincho-2.avif', alt: 'Área de parrilla', title: 'Área de Parrilla' },
+      { src: '/quincho-3.avif', alt: 'Espacio para reuniones', title: 'Espacio Social' }
     ],
     salton: [
-      { src: '/salton-1.jpg', alt: 'Cascada El Saltón', title: 'El Saltón 1' },
-      { src: '/salton-2.jpg', alt: 'El Saltón vista panorámica', title: 'El Saltón 2' },
-      { src: '/salton-3.jpg', alt: 'Cascada desde arriba', title: 'El Saltón 3' },
-      { src: '/salton-4.jpg', alt: 'Sendero al Saltón', title: 'El Saltón 4' },
-      { src: '/salton-5.jpg', alt: 'Vista lateral cascada', title: 'El Saltón 5' },
-      { src: '/salton-6.jpg', alt: 'Poza del Saltón', title: 'El Saltón 6' },
-      { src: '/salton-7.jpg', alt: 'Naturaleza en El Saltón', title: 'El Saltón 7' },
-      { src: '/salton-8.jpg', alt: 'Camino a la cascada', title: 'El Saltón 8' },
-      { src: '/salton-9.jpg', alt: 'Vista completa', title: 'El Saltón 9' }
+      { src: '/salton-1.avif', alt: 'Cascada El Saltón', title: 'El Saltón 1' },
+      { src: '/salton-2.avif', alt: 'El Saltón vista panorámica', title: 'El Saltón 2' },
+      { src: '/salton-3.avif', alt: 'Cascada desde arriba', title: 'El Saltón 3' },
+      { src: '/salton-4.avif', alt: 'Sendero al Saltón', title: 'El Saltón 4' },
+      { src: '/salton-5.avif', alt: 'Vista lateral cascada', title: 'El Saltón 5' },
+      { src: '/salton-6.avif', alt: 'Poza del Saltón', title: 'El Saltón 6' },
+      { src: '/salton-7.avif', alt: 'Naturaleza en El Saltón', title: 'El Saltón 7' },
+      { src: '/salton-8.avif', alt: 'Camino a la cascada', title: 'El Saltón 8' },
+      { src: '/salton-9.avif', alt: 'Vista completa', title: 'El Saltón 9' }
     ],
     miradores: [
-      { src: '/mirador-las-lajas.jpg', alt: 'Mirador Las Lajas', title: 'Mirador Las Lajas' },
-      { src: '/mirador-las-lajas2.jpg', alt: 'Vista desde el mirador', title: 'Mirador Las Lajas 2' },
-      { src: '/mirador-las-lajas3.jpg', alt: 'Panorámica del mirador', title: 'Mirador Las Lajas 3' }
+      { src: '/mirador-las-lajas.avif', alt: 'Mirador Las Lajas', title: 'Mirador Las Lajas' },
+      { src: '/mirador-las-lajas2.avif', alt: 'Vista desde el mirador', title: 'Mirador Las Lajas 2' },
+      { src: '/mirador-las-lajas3.avif', alt: 'Panorámica del mirador', title: 'Mirador Las Lajas 3' }
     ],
     vistas: [
-      { src: '/montana-1.jpg', alt: 'Vista de las montañas', title: 'Montañas 1' },
-      { src: '/montanas-2.jpg', alt: 'Sierras de Catamarca', title: 'Montañas 2' },
-      { src: '/vista-exterior.jpg', alt: 'Vista exterior del hospedaje', title: 'Vista Exterior' }
+      { src: '/montana-1.avif', alt: 'Vista de las montañas', title: 'Montañas 1' },
+      { src: '/montanas-2.avif', alt: 'Sierras de Catamarca', title: 'Montañas 2' },
+      { src: '/vista-exterior.avif', alt: 'Vista exterior del hospedaje', title: 'Vista Exterior' }
     ],
     visitas: [
-      { src: '/visitas-1.jpg', alt: 'Huéspedes disfrutando del hospedaje', title: 'Visitas de Huéspedes' },
-      { src: '/visitas-2.jpg', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' },
-      { src: '/visitas-3.jpg', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' },
-      { src: '/visitas-4.jpg', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' },
-      { src: '/visitas-5.jpg', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' }
+      { src: '/visitas-1.avif', alt: 'Huéspedes disfrutando del hospedaje', title: 'Visitas de Huéspedes' },
+      { src: '/visitas-2.avif', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' },
+      { src: '/visitas-3.avif', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' },
+      { src: '/visitas-4.avif', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' },
+      { src: '/visitas-5.avif', alt: 'Momentos de nuestros visitantes', title: 'Recuerdos de Visitas' }
     ]
   };
 

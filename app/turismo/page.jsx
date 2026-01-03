@@ -46,6 +46,15 @@ export default async function Turismo() {
     }
   };
 
+  // Antes del return, después de la consulta
+console.log('🔍 Lugares con imágenes:', 
+  lugares?.map(l => ({
+    nombre: l.nombre,
+    imagen: l.imagen,
+    existe: l.imagen ? 'Sí' : 'No'
+  }))
+);
+
   return (
     <div>
       {/* Header */}

@@ -18,7 +18,7 @@ export default function Home() {
             <Link href="/galeria" className="text-center hover-lift p-8 rounded-2xl bg-white shadow-lg transition-all duration-300 group cursor-pointer">
               <div className="relative mb-6 overflow-hidden rounded-2xl h-48">
                 <Image
-                  src="/montanas-2.jpg"
+                  src="/montanas-2.avif"
                   alt="Vistas increíbles de las montañas"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -36,7 +36,7 @@ export default function Home() {
             <Link href="/galeria" className="text-center hover-lift p-8 rounded-2xl bg-white shadow-lg transition-all duration-300 group cursor-pointer">
               <div className="relative mb-6 overflow-hidden rounded-2xl h-48">
                 <Image
-                  src="/salton-1.jpg"
+                  src="/salton-1.avif"
                   alt="Cascada El Saltón"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -54,7 +54,7 @@ export default function Home() {
             <Link href="/galeria" className="text-center hover-lift p-8 rounded-2xl bg-white shadow-lg transition-all duration-300 group cursor-pointer">
               <div className="relative mb-6 overflow-hidden rounded-2xl h-48">
                 <Image
-                  src="/habitacion-1.jpg"
+                  src="/habitacion-1.avif"
                   alt="Habitaciones cómodas"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -154,9 +154,9 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { src: '/patio-1.webp', alt: 'Patio principal' },
-              { src: '/patio-2.jpg', alt: 'Patio exterior' },
-              { src: '/habitacion-2.jpg', alt: 'Habitación confortable' },
-              { src: '/quincho-2.jpg', alt: 'Quincho' }
+              { src: '/patio-2.avif', alt: 'Patio exterior' },
+              { src: '/habitacion-2.avif', alt: 'Habitación confortable' },
+              { src: '/quincho-2.avif', alt: 'Quincho' }
             ].map((image, index) => (
               <Link
                 key={index}

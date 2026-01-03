@@ -50,7 +50,7 @@ export default async function Alquileres() {
                 {/* Imágenes */}
                 <div className="relative h-96 lg:h-auto">
                   <Image
-                    src="/patio-6.jpg"
+                    src="/patio-6.avif"
                     alt="Casa Completa Vista Montaña"
                     fill
                     className="object-cover"

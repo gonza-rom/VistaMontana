@@ -23,12 +23,12 @@ export default async function AlquilerDetalle({ params }) {
   let fotos = [];
   if (alquiler.tipo === 'casa') {
     fotos = [
-      'quincho-2.jpg',
+      'quincho-2.avif',
       'patio-5.webp',
-      'patio-6.jpg',
-      'habitacion-1.jpg',
-      'habitacion-2.jpg',
-      'habitacion-3.jpg'
+      'patio-6.avif',
+      'habitacion-1.avif',
+      'habitacion-2.avif',
+      'habitacion-3.avif'
     ];
   } else if (alquiler.fotos) {
     try {
@@ -44,7 +44,7 @@ export default async function AlquilerDetalle({ params }) {
       }
     } catch (e) {
       console.error('Error parseando fotos:', e);
-      fotos = ['habitacion-1.jpg'];
+      fotos = ['habitacion-1.avif'];
     }
   }
 

@@ -9,21 +9,21 @@ export default function HeroCarousel() {
 
   const slides = [
     {
-      image: '/patio-6.jpg',
+      image: '/patio-6.avif',
       title: 'Hospedaje Vista Montaña',
       subtitle: 'Tu refugio en las sierras de Catamarca',
       cta: 'Ver Alojamientos',
       link: '/alquileres'
     },
     {
-      image: '/salton-1.jpg',
+      image: '/salton-1.avif',
       title: 'Cerca de El Saltón',
       subtitle: 'A minutos de la cascada más impresionante',
       cta: 'Descubrir Más',
       link: '/turismo'
     },
     {
-      image: '/montanas-2.jpg',
+      image: '/montanas-2.avif',
       title: 'Naturaleza y Tranquilidad',
       subtitle: 'Despertá rodeado de paisajes increíbles',
       cta: 'Ver Galería',
