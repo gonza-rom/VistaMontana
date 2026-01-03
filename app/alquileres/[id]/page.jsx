@@ -1,10 +1,23 @@
+"use client";
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
+import { gtmEvent } from "@/lib/gtm";
+import { useEffect } from "react";
 
 export default async function AlquilerDetalle({ params }) {
+
+  useEffect(() => {
+    gtmEvent("view_alojamiento", {
+      alojamiento_id: alojamiento.id,
+      alojamiento_nombre: alojamiento.nombre,
+      precio: alojamiento.precio_por_noche,
+      tipo: alojamiento.tipo,
+    });
+  }, [alojamiento]);
+
   const { id } = await params; // Importante: await params en Next.js 15+
   const db = supabase();
 

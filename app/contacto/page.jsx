@@ -89,11 +89,11 @@ export default function Contacto() {
                 <div>
                   <h3 className="font-bold text-lg mb-1">Email</h3>
                   <a 
-                    href="mailto:hospedajevistamontaña@gmail.com"
+                    href="mailto:hospedajevistamontana@gmail.com"
                     className="hover:opacity-80"
                     style={{color: '#656B5B'}}
                   >
-                    hospedajevistamontaña@gmail.com
+                    hospedajevistamontana@gmail.com
                   </a>
                 </div>
               </div>

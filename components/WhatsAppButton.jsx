@@ -1,5 +1,6 @@
 "use client";
 
+import { gtmEvent } from "@/lib/gtm";
 import { useState } from 'react';
 
 export default function WhatsAppButton() {
@@ -16,6 +17,11 @@ export default function WhatsAppButton() {
       onMouseLeave={() => setIsHovered(false)}
       className="fixed bottom-6 right-6 z-50 group"
       aria-label="Contactar por WhatsApp"
+      onClick={() =>
+    gtmEvent("click_whatsapp", {
+      origen: "floating_button",
+    })
+  }
     >
       <div className="relative">
         {/* Pulse Animation */}

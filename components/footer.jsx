@@ -45,11 +45,11 @@ export default function Footer() {
                 +54 9 383 494-6767
               </a>
               <a
-                href="mailto:hospedajevistamontaña@gmail.com"
+                href="mailto:hospedajevistamontana@gmail.com"
                 className="flex items-center text-gray-300 hover:text-white transition-colors duration-300"
               >
                 <span className="mr-2 text-xl">✉️</span>
-                hospedajevistamontaña@gmail.com
+                hospedajevistamontana@gmail.com
               </a>
             </div>
           </div>
